@@ -3,18 +3,12 @@
 - hosts: all
   become: true
   tasks:
-
-  - name: update repository index
-    apt:
-      update_cache: yes 
-
-  - name: install apache2 package (u can write whatever)
-    apt:
-      name: apache2
+  - name: update cache and install apache and php (u can write whatever)
+    package:
+      name:
+        - '{{apache_package}}'
+        - '{{php_package}}'  
       state: latest
+      update_cache: yes  
 
 
-  - name: instal php support for apache
-    apt:
-      name: libapache2-mod-php
-      state: latest

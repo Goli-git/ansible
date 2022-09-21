@@ -1,2 +1,2 @@
-192.168.178.167 ansible_user=test1
-192.168.178.168 ansible_user=test2
+192.168.178.167 ansible_user=test1 apache_package=apache2 php_package=libapache2-mod-php
+192.168.178.168 ansible_user=test2 apache_package=apache2 php_package=libapache2-mod-php
